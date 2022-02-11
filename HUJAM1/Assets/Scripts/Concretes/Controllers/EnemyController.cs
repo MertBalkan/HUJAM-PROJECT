@@ -1,6 +1,5 @@
 using HUJAM1.Abstracts.Components;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace HUJAM1.Concretes.Controllers
 {

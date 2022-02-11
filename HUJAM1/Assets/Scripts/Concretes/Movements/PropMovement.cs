@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PropMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     void Start()
     {
         
