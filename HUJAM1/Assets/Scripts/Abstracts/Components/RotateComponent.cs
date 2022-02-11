@@ -18,7 +18,7 @@ namespace HUJAM1.Abstracts.Components
         {
             MakeRotation();
         }
-        void MakeRotation()
+        private void MakeRotation()
         {
             transform.Rotate(new Vector3(_rotateSpeedX, transform.rotation.y, _rotateSpeedZ) * Time.deltaTime, Space.Self);
         }
