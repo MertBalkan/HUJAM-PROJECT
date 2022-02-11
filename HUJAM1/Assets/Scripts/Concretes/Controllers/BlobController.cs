@@ -9,6 +9,9 @@ namespace HUJAM1.Concretes.Controllers
         {
             if (other.gameObject.CompareTag("Player"))
             {
+                GameManager.Instance.IncreaseBlobScore();
+                GameManager.Instance.IncreasePlayerSize();
+                
                 Destroy(this.gameObject);
             }
         }

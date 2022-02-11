@@ -16,7 +16,19 @@ namespace HUJAM1.Concretes.Controllers
         private void OnEnable()
         {
             _moveSpeed = Random.Range(2.0f, 6.0f);
+
+            GameManager.Instance.OnPlayerDie += HandleOnPlayerDie;
         }
+        private void OnDisable()
+        {
+            GameManager.Instance.OnPlayerDie -= HandleOnPlayerDie;
+        }
+
+        private void HandleOnPlayerDie()
+        {
+            Die();
+        }
+
         protected override void Update()
         {
             base.Update();
@@ -27,7 +39,7 @@ namespace HUJAM1.Concretes.Controllers
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                Die();
+                GameManager.Instance.KillPlayer();
             }
         }
 
@@ -38,7 +50,7 @@ namespace HUJAM1.Concretes.Controllers
 
         private void Die()
         {
-            SceneManager.LoadScene(0); // Change Here Later!
+            GameManager.Instance.LoadSceneByIndex(0);
         }
     }
 }
