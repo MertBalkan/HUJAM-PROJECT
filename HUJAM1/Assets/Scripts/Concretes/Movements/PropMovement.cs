@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
+using HUJAM1.Abstracts.Components;
+using HUJAM1.Abstracts.Movements;
 using UnityEngine;
 
-public class PropMovement : MonoBehaviour
+namespace HUJAM1.Concretes.Movements
 {
-    
-    void Start()
+    public class PropMovement : IMove2D
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private PropController _prop;
+        public PropMovement(PropController prop)
+        {
+            _prop = prop;
+        }
+        public void Move(float horizontalDir, float verticalDir)
+        {
+            _prop.transform.Translate(new Vector3(horizontalDir, verticalDir, 0) * Time.deltaTime, Space.World);
+        }
     }
 }
