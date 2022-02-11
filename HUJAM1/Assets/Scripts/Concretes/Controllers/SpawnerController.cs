@@ -24,7 +24,7 @@ namespace HUJAM1.Concretes.Controllers
 
         private void Start()
         {
-            InvokeRepeating("SpawnBLob", _blobStartSpawnTime, _blobSpawnRate);
+            InvokeRepeating("SpawnBlob", _blobStartSpawnTime, _blobSpawnRate);
             InvokeRepeating("SpawnEnemy", _enemyStartSpawnTime, _enemySpawnRate);
         }
         public void SpawnBlob()
