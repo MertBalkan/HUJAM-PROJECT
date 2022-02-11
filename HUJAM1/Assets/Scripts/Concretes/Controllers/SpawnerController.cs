@@ -24,29 +24,24 @@ namespace HUJAM1.Concretes.Controllers
 
         private void Start()
         {
+            InvokeRepeating("SpawnBLob", _blobStartSpawnTime, _blobSpawnRate);
+            InvokeRepeating("SpawnEnemy", _enemyStartSpawnTime, _enemySpawnRate);
         }
         public void SpawnBlob()
         {
-            int randomIndex = Random.Range(0, _blobSpawnPoints.Capacity);
-            Instantiate(_blobGameObject, _blobSpawnPoints[randomIndex].transform.position, Quaternion.identity);
+            Spawn(_blobGameObject, _blobSpawnPoints);
         }
 
         public void SpawnEnemy()
         {
-            Spawn(_enemyGameObject, _enemySpawnPoints, _enemySpawnRate, _enemyStartSpawnTime);
+            Spawn(_enemyGameObject, _enemySpawnPoints);
         }
-        private void Spawn(GameObject whichGameObject, List<GameObject> spawnList, float spawnRate, float spawnStartTime)
+        private void Spawn(GameObject whichGameObject, List<GameObject> spawnList)
         {
             if (spawnList == null) return;
             int randomIndex = Random.Range(0, spawnList.Count);
 
-            GameObject gameObj = Instantiate(whichGameObject, spawnList[randomIndex].transform.position, Quaternion.identity);
+            Instantiate(whichGameObject, spawnList[randomIndex].transform.position, Quaternion.identity);
         }
-
-        void ISpawner2D.DestroyObject()
-        {
-            
-        }
-
     }
 }
