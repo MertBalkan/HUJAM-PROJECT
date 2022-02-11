@@ -1,5 +1,6 @@
 using HUJAM1.Abstracts.Components;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace HUJAM1.Concretes.Controllers
 {
@@ -22,9 +23,23 @@ namespace HUJAM1.Concretes.Controllers
             MoveToPlayer();
 
         }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.CompareTag("Player"))
+            {
+                Die();
+            }
+        }
+
         private void MoveToPlayer()
         {
             this.transform.position = Vector3.Lerp(transform.position, _character.transform.position, (Time.deltaTime / _moveSpeed));
+        }
+
+        private void Die()
+        {
+            SceneManager.LoadScene(0); // Change Here Later!
         }
     }
 }
