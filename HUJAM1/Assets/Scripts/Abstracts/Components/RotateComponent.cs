@@ -7,7 +7,6 @@ namespace HUJAM1.Abstracts.Components
     public abstract class RotateComponent : MonoBehaviour
     {
         private float _rotateSpeedX;
-        private float _rotateSpeedY;
         private float _rotateSpeedZ;
         
         private void OnEnable()
@@ -21,7 +20,7 @@ namespace HUJAM1.Abstracts.Components
         }
         void MakeRotation()
         {
-            transform.Rotate(new Vector3(_rotateSpeedX, transform.rotation.y, _rotateSpeedZ) * Time.deltaTime, Space.World);
+            transform.Rotate(new Vector3(_rotateSpeedX, transform.rotation.y, _rotateSpeedZ) * Time.deltaTime, Space.Self);
         }
     }
 }
