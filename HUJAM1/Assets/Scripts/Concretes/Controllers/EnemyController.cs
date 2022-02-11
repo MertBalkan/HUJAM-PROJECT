@@ -21,7 +21,6 @@ namespace HUJAM1.Concretes.Controllers
         {
             base.Update();
             MoveToPlayer();
-
         }
 
         private void OnCollisionEnter(Collision other)
