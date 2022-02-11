@@ -1,3 +1,4 @@
+using HUJAM1.Abstracts.Components;
 using HUJAM1.Abstracts.Controllers;
 using HUJAM1.Abstracts.Inputs;
 using HUJAM1.Abstracts.Movements;
@@ -7,7 +8,7 @@ using UnityEngine;
 
 namespace HUJAM1.Concretes.Controllers
 {
-    public class CharacterController2D : MonoBehaviour, IEntityController
+    public class CharacterController2D : RotateComponent, IEntityController
     {
         [SerializeField] private float _moveSpeed;
         public float MoveSpeed => _moveSpeed;
@@ -20,8 +21,9 @@ namespace HUJAM1.Concretes.Controllers
             _move2D = new CharacterMove2D(this);
             _input2D = new PCInput2D();
         }
-        private void Update()
+        protected override void Update()
         {
+            base.Update();
             _move2D.Move(_input2D.HorizontalMove, _input2D.VerticalMove);
         }
     }
