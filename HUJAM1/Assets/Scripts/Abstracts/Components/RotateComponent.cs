@@ -9,7 +9,7 @@ namespace HUJAM1.Abstracts.Components
         private float _rotateSpeedX;
         private float _rotateSpeedZ;
         
-        private void OnEnable()
+        private void Start()
         {
             _rotateSpeedX = Random.Range(0, 25.0f);
             _rotateSpeedZ = Random.Range(0, 25.0f);
