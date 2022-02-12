@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private AudioClip _backgroundMusic;
+    //[SerializeField] private AudioClip _backgroundMusic; Background will be keep playing so i dont need to assign this right now.
     [SerializeField] private AudioClip _pickupAudio;
 
     /// <summary>
@@ -17,7 +17,8 @@ public class AudioManager : MonoBehaviour
         _audios = GetComponentsInChildren<AudioSource>();
     }
 
-    private void Update()
+    public void PlayPickupAudio()
     {
+        _audios[0].Play();
     }
 }
