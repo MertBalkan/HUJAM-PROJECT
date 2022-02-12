@@ -4,5 +4,7 @@ namespace HUJAM1.Abstracts.Inputs
     {
         float HorizontalMove { get; }
         float VerticalMove { get; }
+        float MouseAxisX { get; }
+        float MouseAxisY { get; }
     }
 }
