@@ -14,7 +14,7 @@ namespace HUJAM1.Concretes.Movements
         public void Move(float horizontalDir, float verticalDir)
         {
             if (horizontalDir == 0 && verticalDir == 0) return;
-            _entity.transform.Translate(new Vector3(horizontalDir, 0, verticalDir) * Time.deltaTime * _entity.MoveSpeed, Space.World);
+            _entity.transform.Translate(new Vector3(horizontalDir, 0, verticalDir) * Time.deltaTime * _entity.MoveSpeed, Space.Self);
         }
     }
 }
