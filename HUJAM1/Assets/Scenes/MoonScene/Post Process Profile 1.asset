@@ -1,120 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8360700648465256248
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
-  m_Name: DepthOfField
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  mode:
-    m_OverrideState: 1
-    m_Value: 2
-  gaussianStart:
-    m_OverrideState: 1
-    m_Value: 0
-    min: 0
-  gaussianEnd:
-    m_OverrideState: 1
-    m_Value: 4
-    min: 0
-  gaussianMaxRadius:
-    m_OverrideState: 1
-    m_Value: 1.5
-    min: 0.5
-    max: 1.5
-  highQualitySampling:
-    m_OverrideState: 1
-    m_Value: 1
-  focusDistance:
-    m_OverrideState: 1
-    m_Value: 10.18
-    min: 0.1
-  aperture:
-    m_OverrideState: 1
-    m_Value: 5.3
-    min: 1
-    max: 32
-  focalLength:
-    m_OverrideState: 1
-    m_Value: 300
-    min: 1
-    max: 300
-  bladeCount:
-    m_OverrideState: 0
-    m_Value: 8
-    min: 3
-    max: 9
-  bladeCurvature:
-    m_OverrideState: 0
-    m_Value: 0.8
-    min: 0
-    max: 1
-  bladeRotation:
-    m_OverrideState: 0
-    m_Value: 55
-    min: -180
-    max: 180
---- !u!114 &-5627398390210562026
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
-  m_Name: Bloom
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  threshold:
-    m_OverrideState: 1
-    m_Value: 0.73
-    min: 0
-  intensity:
-    m_OverrideState: 1
-    m_Value: 1.2
-    min: 0
-  scatter:
-    m_OverrideState: 0
-    m_Value: 0.7
-    min: 0
-    max: 1
-  clamp:
-    m_OverrideState: 0
-    m_Value: 65472
-    min: 0
-  tint:
-    m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
-    hdr: 0
-    showAlpha: 0
-    showEyeDropper: 1
-  highQualityFiltering:
-    m_OverrideState: 1
-    m_Value: 1
-  skipIterations:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-    max: 16
-  dirtTexture:
-    m_OverrideState: 1
-    m_Value: {fileID: 2800000, guid: 9518992594a52db4eb17a22eda58c0f8, type: 3}
-  dirtIntensity:
-    m_OverrideState: 1
-    m_Value: 31.75
-    min: 0
---- !u!114 &-5161116076508417695
+--- !u!114 &-7562555873669575658
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,7 +19,24 @@ MonoBehaviour:
     m_Value: 0.234
     min: 0
     max: 1
---- !u!114 &-689361296217634271
+--- !u!114 &-6577037408759529642
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
+  m_Name: Tonemapping
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  mode:
+    m_OverrideState: 1
+    m_Value: 2
+--- !u!114 &-5494867378690606792
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -404,7 +307,7 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
---- !u!114 &-129948444228173789
+--- !u!114 &-5010339911194584214
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -434,28 +337,7 @@ MonoBehaviour:
   texture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: Post Process Profile
-  m_EditorClassIdentifier: 
-  components:
-  - {fileID: 4277904419887167387}
-  - {fileID: -8360700648465256248}
-  - {fileID: 483569260549476106}
-  - {fileID: -5627398390210562026}
-  - {fileID: -689361296217634271}
-  - {fileID: 5151326840945876312}
-  - {fileID: -129948444228173789}
-  - {fileID: -5161116076508417695}
---- !u!114 &483569260549476106
+--- !u!114 &-3169041177644320652
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -464,15 +346,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
-  m_Name: Tonemapping
+  m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
+  m_Name: Bloom
   m_EditorClassIdentifier: 
   active: 1
   m_AdvancedMode: 0
-  mode:
+  threshold:
     m_OverrideState: 1
-    m_Value: 2
---- !u!114 &4277904419887167387
+    m_Value: 0.73
+    min: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 1.2
+    min: 0
+  scatter:
+    m_OverrideState: 0
+    m_Value: 0.7
+    min: 0
+    max: 1
+  clamp:
+    m_OverrideState: 0
+    m_Value: 65472
+    min: 0
+  tint:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    hdr: 0
+    showAlpha: 0
+    showEyeDropper: 1
+  highQualityFiltering:
+    m_OverrideState: 1
+    m_Value: 1
+  skipIterations:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 16
+  dirtTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 9518992594a52db4eb17a22eda58c0f8, type: 3}
+  dirtIntensity:
+    m_OverrideState: 1
+    m_Value: 31.75
+    min: 0
+--- !u!114 &-1916670781266213643
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -508,7 +425,90 @@ MonoBehaviour:
   rounded:
     m_OverrideState: 1
     m_Value: 1
---- !u!114 &5151326840945876312
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: Post Process Profile 1
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: -1916670781266213643}
+  - {fileID: 2836242211100242495}
+  - {fileID: -6577037408759529642}
+  - {fileID: -3169041177644320652}
+  - {fileID: -5494867378690606792}
+  - {fileID: 6587879487699305602}
+  - {fileID: -5010339911194584214}
+  - {fileID: -7562555873669575658}
+--- !u!114 &2836242211100242495
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
+  m_Name: DepthOfField
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  mode:
+    m_OverrideState: 1
+    m_Value: 2
+  gaussianStart:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+  gaussianEnd:
+    m_OverrideState: 1
+    m_Value: 4
+    min: 0
+  gaussianMaxRadius:
+    m_OverrideState: 1
+    m_Value: 1.5
+    min: 0.5
+    max: 1.5
+  highQualitySampling:
+    m_OverrideState: 1
+    m_Value: 1
+  focusDistance:
+    m_OverrideState: 1
+    m_Value: 10.18
+    min: 0.1
+  aperture:
+    m_OverrideState: 1
+    m_Value: 5.3
+    min: 1
+    max: 32
+  focalLength:
+    m_OverrideState: 1
+    m_Value: 300
+    min: 1
+    max: 300
+  bladeCount:
+    m_OverrideState: 0
+    m_Value: 8
+    min: 3
+    max: 9
+  bladeCurvature:
+    m_OverrideState: 0
+    m_Value: 0.8
+    min: 0
+    max: 1
+  bladeRotation:
+    m_OverrideState: 0
+    m_Value: 55
+    min: -180
+    max: 180
+--- !u!114 &6587879487699305602
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
