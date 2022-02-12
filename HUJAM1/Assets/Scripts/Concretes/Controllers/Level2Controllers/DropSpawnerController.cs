@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using HUJAM1.Abstracts.Spawners;
+using HUJAM1.Concretes.Movements;
 using UnityEngine;
 
 namespace HUJAM1.Concretes.Controllers
@@ -10,20 +11,25 @@ namespace HUJAM1.Concretes.Controllers
         [SerializeField] private GameObject _dropGameObject;
         [SerializeField] private float _dropSpawnRate;
         [SerializeField] private float _dropStartSpawnTime;
-
+        private ScientistArmMovement _arm;
+        private void Awake()
+        {
+            _arm = FindObjectOfType<ScientistArmMovement>();
+        }
         private void Start()
         {
             InvokeRepeating("SpawnDrop", _dropStartSpawnTime, _dropSpawnRate);
         }
-
         public void SpawnDrop()
         {
-            Spawn(_dropGameObject);
+            if (_arm.CanDropsVisible)
+                Spawn(_dropGameObject);
         }
         private void Spawn(GameObject whichGameObject)
         {
-
-            Instantiate(whichGameObject, transform.position, Quaternion.identity);
+            GameObject obj = Instantiate(whichGameObject, transform.position, Quaternion.identity);
+            if(obj == null) return;
+            obj.transform.rotation = Quaternion.Euler(-90.0f, 0, 0);
         }
     }
 }
