@@ -1,4 +1,5 @@
 using HUJAM1.Abstracts.Components;
+using HUJAM1.Concretes.Managers;
 using UnityEngine;
 
 namespace HUJAM1.Concretes.Controllers

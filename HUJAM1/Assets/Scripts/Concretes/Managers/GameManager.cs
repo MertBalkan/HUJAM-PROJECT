@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using HUJAM1.Concretes.Controllers;
+using HUJAM1.Concretes.Managers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -61,6 +62,17 @@ public class GameManager : MonoBehaviour
     public void PlayButtonPressed(int sceneIndex)
     {
         StartCoroutine(PlayButtonEnumerator(sceneIndex));
+    }
+    public void CreditsButtonPressed()
+    {
+        AnimationManager.Instance.StartCreditAnim();
+        StartCoroutine(PlayCreditAnimation());
+    }
+    private IEnumerator PlayCreditAnimation()
+    {
+        AnimationManager.Instance.PlayCreditsAnim(false);
+        yield return new WaitForSeconds(4.0f);
+        AnimationManager.Instance.PlayCreditsAnim(true);
     }
     private IEnumerator PlayButtonEnumerator(int sceneIndex)
     {
