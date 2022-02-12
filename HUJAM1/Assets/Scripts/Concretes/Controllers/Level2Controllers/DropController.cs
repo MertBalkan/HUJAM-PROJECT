@@ -8,7 +8,6 @@ namespace HUJAM1.Concretes.Controllers
         [SerializeField] private float _decalHeightFromGround = -0.36f;
         [SerializeField] private List<GameObject> _decals;
 
-        private bool _canVisible = true;
 
         private void OnCollisionEnter(Collision other)
         {
@@ -21,12 +20,13 @@ namespace HUJAM1.Concretes.Controllers
             }
             if (other.gameObject.CompareTag("Player"))
             {
-                GameManager.Instance.LoadSceneByIndex(2);
+                GameManager.Instance.LoadSelfScene();
             }
             if (other.gameObject.CompareTag("Drop"))
             {
                 Destroy(this.gameObject);
             }
+            Destroy(this.gameObject);
         }
     }
 }

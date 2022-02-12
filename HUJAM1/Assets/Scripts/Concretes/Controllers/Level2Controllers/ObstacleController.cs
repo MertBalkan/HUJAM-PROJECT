@@ -10,7 +10,7 @@ namespace HUJAM1.Concretes.Controllers
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                GameManager.Instance.LoadSceneByIndex(2);
+                // GameManager.Instance.LoadSceneByIndex();
             }
         }
     }
