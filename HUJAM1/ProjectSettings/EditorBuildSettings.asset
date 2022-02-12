@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MoonScene/MoonScene.unity
     guid: fd4467f2eee200544a98174fd9022de4
+  - enabled: 1
+    path: Assets/Scenes/Level2Scene.unity
+    guid: a3c2ed8361db7644197349d9289cae25
   m_configObjects: {}
