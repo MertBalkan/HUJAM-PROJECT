@@ -49,7 +49,7 @@ namespace HUJAM1.Concretes.Controllers
 
         private void Die()
         {
-            GameManager.Instance.LoadSceneByIndex(0);
+            GameManager.Instance.LoadSceneByIndex(1);
         }
     }
 }

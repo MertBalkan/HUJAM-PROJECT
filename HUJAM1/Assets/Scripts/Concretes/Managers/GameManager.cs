@@ -17,6 +17,19 @@ public class GameManager : MonoBehaviour
         SingletonObject();
     }
 
+    private void SingletonObject()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     public void IncreaseBlobScore()
     {
         _blobScore++;
@@ -45,16 +58,17 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
 
-    private void SingletonObject()
+    public void PlayButtonPressed(int sceneIndex)
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
+        StartCoroutine(PlayButtonEnumerator(sceneIndex));
+    }
+    private IEnumerator PlayButtonEnumerator(int sceneIndex)
+    {
+        yield return new WaitForSeconds(4.0f); //delay time
+        SceneManager.LoadSceneAsync(sceneIndex);
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
