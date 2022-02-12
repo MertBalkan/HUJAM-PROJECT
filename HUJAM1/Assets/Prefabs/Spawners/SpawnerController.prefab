@@ -141,6 +141,11 @@ MonoBehaviour:
   - {fileID: 2451487958349736732}
   - {fileID: 2451487957952314671}
   - {fileID: 2451487958586422194}
+  - {fileID: 1391219672170733394}
+  - {fileID: 6062501518761652187}
+  - {fileID: 8477715013765611195}
+  - {fileID: 2530233064630372399}
+  - {fileID: 1683117674265148655}
   _blobGameObject: {fileID: 281928304511059125, guid: fd1c2b91db1a1a14f8e040fbf7eada70, type: 3}
   _blobSpawnRate: 3
   _blobStartSpawnTime: 1
