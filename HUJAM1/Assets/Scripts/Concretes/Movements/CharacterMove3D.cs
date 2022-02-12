@@ -11,10 +11,10 @@ namespace HUJAM1.Concretes.Movements
         {
             _entity = entity;
         }
-        public void Move(float direction)
+        public void Move(float horizontalDir, float verticalDir)
         {
-            if (direction == 0) return;
-            _entity.transform.Translate(Vector3.forward * _entity.MoveSpeed * direction * Time.deltaTime);
+            if (horizontalDir == 0 && verticalDir == 0) return;
+            _entity.transform.Translate(new Vector3(horizontalDir, 0, verticalDir) * Time.deltaTime * _entity.MoveSpeed, Space.World);
         }
     }
 }

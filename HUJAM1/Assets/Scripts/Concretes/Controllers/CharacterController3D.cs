@@ -24,7 +24,7 @@ namespace HUJAM1.Concretes.Controllers
         }
         private void Update()
         {
-            _move.Move(_input.VerticalMove);
+            _move.Move(_input.HorizontalMove, _input.VerticalMove);
         }
     }
 }

@@ -35,7 +35,7 @@ namespace HUJAM1.Concretes.Levels
         {
             if (GameManager.Instance.BlobScore >= 18)
             {
-                GameManager.Instance.LoadSceneByIndex(1);
+                GameManager.Instance.LoadSceneByIndex(2);
             }
         }
     }
