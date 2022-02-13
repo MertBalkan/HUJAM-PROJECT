@@ -6,9 +6,17 @@ namespace HUJAM1.Concretes.Movements
 {
     public class ScientistArmMovement : MonoBehaviour
     {
+        [Header("PLAYER")]
         [SerializeField] private GameObject _player;
+        [Header("ARMATURE")]
         [SerializeField] private GameObject _armature;
+        [Header("MOVEMENT")]
         [SerializeField] private float _armMoveSpeed;
+        [Space(20)]
+        [Header("Kankam asagidaki kisimda offseti degistirebilirsin ya da ek carpim katsayisi vererek de degistirebilirsin")]
+        [Header("OFFSET OPTIONS FOR ARM")]
+        [SerializeField] private Vector3 _addiotinalOffset;
+        [SerializeField] private Vector3 _addiotinalMultiply;
 
         private Quaternion _currentRotation;
         private Quaternion _nextRotation;
@@ -25,6 +33,18 @@ namespace HUJAM1.Concretes.Movements
         }
         private void Update()
         {
+
+            Vector3 totalOffset = new Vector3
+            (
+                _addiotinalOffset.x + Mathf.Sin(Time.time) * _addiotinalMultiply.x,
+                _addiotinalOffset.y * _addiotinalMultiply.y,
+                (Mathf.Cos(Time.time) * _addiotinalMultiply.z) - _addiotinalOffset.z
+             );
+
+            Vector3 movePosition = Vector3.Lerp(transform.position, _player.transform.position + totalOffset, Time.deltaTime * _armMoveSpeed);
+            this.transform.position = movePosition;
+
+            
             if (_isOnAttackMode)
                 AttackPlayer();
             else
@@ -38,11 +58,6 @@ namespace HUJAM1.Concretes.Movements
 
             _currentRotation = Quaternion.Lerp(_currentRotation, _nextRotation, Time.deltaTime);
             _armature.transform.rotation = _currentRotation;
-
-            Vector3 offset = new Vector3(15 + Mathf.Sin(Time.time) * 2, 5, (Mathf.Cos(Time.time) * 2) - 3);
-
-            Vector3 movePosition = Vector3.Lerp(transform.position, _player.transform.position + offset, Time.deltaTime * _armMoveSpeed);
-            this.transform.position = movePosition;
 
             StartCoroutine(BreathTime());
         }
