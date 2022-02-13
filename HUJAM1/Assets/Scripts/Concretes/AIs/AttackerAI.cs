@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using HUJAM1.Concretes.Managers;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -13,22 +14,20 @@ namespace HUJAM1.Concretes.AIs
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
         }
-        private void FixedUpdate()
+        private void Update()
         {
             if (Vector3.Distance(_player.transform.position, transform.position) >= _navMeshAgent.stoppingDistance)
             {
+                AnimationManager.Instance.PlayAttackAnimation(false);
                 _navMeshAgent.destination = _player.transform.position;
+                this.transform.LookAt(_player.transform);
             }
 
-            if (_navMeshAgent.velocity == Vector3.zero)
+            if (Vector3.Distance(_player.transform.position, transform.position) <= _navMeshAgent.stoppingDistance)
             {
-                // Attack Animation
+                AnimationManager.Instance.PlayAttackAnimation(true);
+                this.transform.LookAt(_player.transform);
             }
-            else
-            {
-                // Walk Animation
-            }
-
         }
     }
 }

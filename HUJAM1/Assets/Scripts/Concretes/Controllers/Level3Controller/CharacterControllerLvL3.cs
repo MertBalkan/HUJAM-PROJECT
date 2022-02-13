@@ -17,26 +17,28 @@ namespace HUJAM1.Concretes.Controllers
 
         public float MoveSpeed => throw new System.NotImplementedException();
 
+        public MoveBehaviour Move { get => _move; set => _move = value; }
+
         private void Awake()
         {
             _anim = new Lvl2CharAnim(this);
             _input = new PCInput2D();
-            _move = GetComponentInParent<MoveBehaviour>();
+            Move = GetComponentInParent<MoveBehaviour>();
         }
 
         private void Update()
         {
             _anim.WalkAnimation(_input.HorizontalMove, _input.VerticalMove);
-
+            Debug.Log(Move);
             if (_input.PressRunButton)
             {
                 _anim.IsRunning(true);
-                _move.walkSpeed = 2.0f;
+                Move.walkSpeed = 10.0f;
             }
             if (_input.ReleaseRunButton)
             {
                 _anim.IsRunning(false);
-                _move.walkSpeed = 0.11f;
+                Move.walkSpeed = 0.11f;
             }
         }
 
