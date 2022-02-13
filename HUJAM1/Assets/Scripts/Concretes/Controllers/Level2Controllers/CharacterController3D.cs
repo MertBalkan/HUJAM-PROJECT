@@ -31,7 +31,9 @@ namespace HUJAM1.Concretes.Controllers
         {
             _move.Move(_input.HorizontalMove, _input.VerticalMove);
             _animation.WalkAnimation(_input.HorizontalMove, _input.VerticalMove);
-            Turn();
+            if(_input.VerticalMove != 0){
+                Turn();
+            }
 
         }
         private void Turn()
