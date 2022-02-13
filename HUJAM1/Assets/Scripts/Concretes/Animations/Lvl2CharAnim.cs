@@ -11,6 +11,12 @@ namespace HUJAM1.Concretes.Animations
         {
             _entity = entity;
         }
+
+        public void IsRunning(bool run)
+        {
+            _entity.transform.GetComponent<Animator>().SetBool("isRunning", run);
+        }
+
         public void WalkAnimation(float horDirection, float verDirection)
         {
             horDirection = Mathf.Abs(horDirection);

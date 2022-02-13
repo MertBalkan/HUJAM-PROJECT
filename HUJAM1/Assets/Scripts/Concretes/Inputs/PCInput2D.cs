@@ -11,5 +11,7 @@ namespace HUJAM1.Concretes.Inputs
         public float MouseAxisY => Input.GetAxis("Mouse Y");
         public bool InteractButton => Input.GetKey(KeyCode.E);
         public bool ThrowTube => Input.GetMouseButtonDown(0);
+        public bool PressRunButton =>Input.GetKey(KeyCode.LeftShift);
+        public bool ReleaseRunButton => Input.GetKeyUp(KeyCode.LeftShift);
     }
 }
