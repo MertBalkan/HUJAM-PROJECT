@@ -37,7 +37,7 @@ namespace HUJAM1.Concretes.Movements
             Vector3 totalOffset = new Vector3
             (
                 _addiotinalOffset.x + Mathf.Sin(Time.time) * _addiotinalMultiply.x,
-                _addiotinalOffset.y * _addiotinalMultiply.y,
+                _addiotinalOffset.y,
                 (Mathf.Cos(Time.time) * _addiotinalMultiply.z) - _addiotinalOffset.z
              );
 
@@ -54,17 +54,8 @@ namespace HUJAM1.Concretes.Movements
         private void AttackPlayer()
         {
             _nextRotation = Quaternion.Euler(-180, 90, 0);
-            _isOnAttackMode = true; 
-            Vector3 totalOffset = new Vector3
-           (
-               _addiotinalOffset.x + Mathf.Sin(Time.time) * _addiotinalMultiply.x,
-               _addiotinalOffset.y * _addiotinalMultiply.y,
-               (Mathf.Cos(Time.time) * _addiotinalMultiply.z) - _addiotinalOffset.z
-            );
-
-            Vector3 movePosition = Vector3.Lerp(transform.position, _player.transform.position + totalOffset, Time.deltaTime * _armMoveSpeed);
-            this.transform.position = movePosition;
-
+            _isOnAttackMode = true;
+            
             _currentRotation = Quaternion.Lerp(_currentRotation, _nextRotation, Time.deltaTime);
             _armature.transform.rotation = _currentRotation;
 

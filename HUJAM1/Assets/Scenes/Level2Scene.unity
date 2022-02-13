@@ -8113,7 +8113,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426360883}
-  m_LocalRotation: {x: 0.23662284, y: 0.0054581496, z: -0.0013292944, w: 0.9715854}
+  m_LocalRotation: {x: 0.23662281, y: 0.005458189, z: -0.0013293036, w: 0.9715854}
   m_LocalPosition: {x: -21.76, y: 10.086779, z: -22.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -9536,7 +9536,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730597071}
-  m_LocalRotation: {x: 0.23662284, y: 0.0054581496, z: -0.0013292944, w: 0.9715854}
+  m_LocalRotation: {x: 0.23662281, y: 0.005458189, z: -0.0013293036, w: 0.9715854}
   m_LocalPosition: {x: -21.76, y: 10.086779, z: -22.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -17108,7 +17108,7 @@ GameObject:
   m_Layer: 0
   m_Name: Scientist_Arm
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -17128,7 +17128,7 @@ MonoBehaviour:
   _armature: {fileID: 5788149673571492572}
   _armMoveSpeed: 5
   _addiotinalOffset: {x: 15, y: 5, z: 3}
-  _addiotinalMultiply: {x: 2, y: 0, z: 2}
+  _addiotinalMultiply: {x: 2, y: 1, z: 2}
 --- !u!33 &4413950289648721291
 MeshFilter:
   m_ObjectHideFlags: 0
