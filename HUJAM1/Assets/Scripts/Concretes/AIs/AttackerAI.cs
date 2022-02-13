@@ -20,13 +20,13 @@ namespace HUJAM1.Concretes.AIs
         {
             if (Vector3.Distance(_player.transform.position, transform.position) >= _navMeshAgent.stoppingDistance)
             {
-                this.gameObject.GetComponent<Level2Animation>().PlayAttackAnimation(false);
+                this.gameObject.GetComponent<Level3Animation>().PlayAttackAnimation(false);
                 _navMeshAgent.destination = _player.transform.position;
             }
 
             if (Vector3.Distance(_player.transform.position, transform.position) <= _navMeshAgent.stoppingDistance)
             {
-                this.gameObject.GetComponent<Level2Animation>().PlayAttackAnimation(true);
+                this.gameObject.GetComponent<Level3Animation>().PlayAttackAnimation(true);
                 this.transform.LookAt(_player.transform);
             }
         }

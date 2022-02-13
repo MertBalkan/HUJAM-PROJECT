@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using HUJAM1.Concretes.Animations;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -17,6 +18,14 @@ namespace HUJAM1.Concretes.AIs
         private void Update()
         {
             _navMeshAgent.destination = _transformPositions[0].position;
+
+            if (_navMeshAgent.velocity == Vector3.zero)
+            {
+                GetComponent<Level3Animation>().PlayTerrifiedAnimation(true);
+            }
+            else
+                GetComponent<Level3Animation>().PlayTerrifiedAnimation(false);
+
         }
     }
 }
