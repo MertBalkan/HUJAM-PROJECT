@@ -37,7 +37,7 @@ namespace HUJAM1.Concretes.Movements
             Vector3 totalOffset = new Vector3
             (
                 _addiotinalOffset.x + Mathf.Sin(Time.time) * _addiotinalMultiply.x,
-                _addiotinalOffset.y,
+                _addiotinalOffset.y * _addiotinalMultiply.y,
                 (Mathf.Cos(Time.time) * _addiotinalMultiply.z) - _addiotinalOffset.z
              );
 
