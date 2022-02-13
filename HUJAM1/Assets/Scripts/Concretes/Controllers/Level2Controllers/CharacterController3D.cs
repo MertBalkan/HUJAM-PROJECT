@@ -5,6 +5,7 @@ using HUJAM1.Abstracts.Controllers;
 using HUJAM1.Abstracts.Inputs;
 using HUJAM1.Abstracts.Movements;
 using HUJAM1.Concretes.Animations;
+using HUJAM1.Concretes.Audios;
 using HUJAM1.Concretes.Inputs;
 using HUJAM1.Concretes.Movements;
 using UnityEngine;
@@ -21,16 +22,26 @@ namespace HUJAM1.Concretes.Controllers
         private IMove3D _move;
         private IAnimation _animation;
 
+        private Level2Audio _audio;
+
         private void Awake()
         {
             _input = new PCInput2D();
             _move = new CharacterMove3D(this);
             _animation = new Lvl2CharAnim(this);
+
+            _audio = FindObjectOfType<Level2Audio>();
         }
         private void Update()
         {
             _move.Move(_input.HorizontalMove, _input.VerticalMove);
             _animation.WalkAnimation(_input.HorizontalMove, _input.VerticalMove);
+
+            if (_input.HorizontalMove != 0 || _input.VerticalMove != 0)
+            {
+                _audio.PlayCharacterMoveSound();
+                Debug.Log("AAAAAAAAAAAAAAAAAAAAA");
+            }
 
             if (_input.VerticalMove != 0)
                 Turn();

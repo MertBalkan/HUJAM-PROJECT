@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HUJAM1.Concretes.Managers
+namespace HUJAM1.Concretes.Audios
 {
-    public class AudioManager : MonoBehaviour
+    public class Level1Audio : MonoBehaviour
     {
         //[SerializeField] private AudioClip _backgroundMusic; Background will be keep playing so i dont need to assign this right now.
-        [SerializeField] private AudioClip _pickupAudio;
 
         /// <summary>
         /// You must assign audio clips orderly to the child objects.

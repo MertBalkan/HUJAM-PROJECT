@@ -1344,7 +1344,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547296665}
-  m_LocalRotation: {x: 3e-45, y: -1e-45, z: 0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: -1e-45, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1702,7 +1702,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729710121}
-  m_LocalRotation: {x: 3e-45, y: -1e-45, z: 0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: -1e-45, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3980,7 +3980,7 @@ GameObject:
   - component: {fileID: 1804531711}
   - component: {fileID: 1804531712}
   m_Layer: 0
-  m_Name: GameAudios
+  m_Name: LevelAudios
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -4013,7 +4013,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d472728890505d4aa7b2ebd74fa1383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pickupAudio: {fileID: 8300000, guid: a3a246d41f0c09e4cae1843bcfe73d67, type: 3}
 --- !u!1 &1835574082
 GameObject:
   m_ObjectHideFlags: 0
@@ -9263,7 +9262,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a3a246d41f0c09e4cae1843bcfe73d67, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
