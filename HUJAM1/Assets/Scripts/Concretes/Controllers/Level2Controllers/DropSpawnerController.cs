@@ -28,7 +28,7 @@ namespace HUJAM1.Concretes.Controllers
         private void Spawn(GameObject whichGameObject)
         {
             GameObject obj = Instantiate(whichGameObject, transform.position, Quaternion.identity);
-            if(obj == null) return;
+            if (obj == null) return;
             obj.transform.rotation = Quaternion.Euler(-90.0f, 0, 0);
         }
     }

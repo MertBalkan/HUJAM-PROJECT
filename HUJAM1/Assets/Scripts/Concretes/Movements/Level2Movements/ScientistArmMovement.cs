@@ -9,21 +9,37 @@ namespace HUJAM1.Concretes.Movements
         [SerializeField] private GameObject _player;
         [SerializeField] private GameObject _armature;
         [SerializeField] private float _armMoveSpeed;
+
+        private Quaternion _currentRotation;
+        private Quaternion _nextRotation;
+
         private bool _isOnAttackMode = true;
         private bool _canDropsVisible = true;
-        public bool CanDropsVisible { get => _canDropsVisible; set => _canDropsVisible = value; }
 
+        public bool CanDropsVisible { get => _canDropsVisible; set => _canDropsVisible = value; }
+        private void Start()
+        {
+            _currentRotation = Quaternion.Euler(-180, 90, 0); //attack
+            // _currentRotation = Quaternion.Euler(-90, 90, 0); //breath
+            _armature.transform.rotation = _currentRotation;
+        }
         private void Update()
         {
-            AttackPlayer();
-            // if (_isOnAttackMode)
-            // else
-            //     DontAttackToPlayer();
+            if (_isOnAttackMode)
+                AttackPlayer();
+            else
+                DontAttackToPlayer();
 
         }
         private void AttackPlayer()
         {
-            Vector3 offset = new Vector3(10 + Mathf.Sin(Time.time) * 2, 5, (Mathf.Cos(Time.time) * 2) - 3);
+            _nextRotation = Quaternion.Euler(-180, 90, 0);
+            _isOnAttackMode = true;
+
+            _currentRotation = Quaternion.Lerp(_currentRotation, _nextRotation, Time.deltaTime);
+            _armature.transform.rotation = _currentRotation;
+
+            Vector3 offset = new Vector3(15 + Mathf.Sin(Time.time) * 2, 5, (Mathf.Cos(Time.time) * 2) - 3);
 
             Vector3 movePosition = Vector3.Lerp(transform.position, _player.transform.position + offset, Time.deltaTime * _armMoveSpeed);
             this.transform.position = movePosition;
@@ -32,13 +48,11 @@ namespace HUJAM1.Concretes.Movements
         }
         private void DontAttackToPlayer()
         {
-            // Quaternion currentRotation = _armature.transform.rotation;
-            // Quaternion whichRotation = Quaternion.Euler(0, 0, -90);
-
+            _nextRotation = Quaternion.Euler(-90, 90, 0);
             _isOnAttackMode = false;
 
-            // currentRotation = Quaternion.Lerp(currentRotation, whichRotation, Time.deltaTime);
-            // _armature.transform.rotation = currentRotation;
+            _currentRotation = Quaternion.Lerp(_currentRotation, _nextRotation, Time.deltaTime);
+            _armature.transform.rotation = _currentRotation;
 
             StartCoroutine(ExitBreathTime());
         }
@@ -46,13 +60,13 @@ namespace HUJAM1.Concretes.Movements
         private IEnumerator BreathTime()
         {
             _canDropsVisible = true;
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitForSeconds(2.0f);
             _isOnAttackMode = false;
         }
         private IEnumerator ExitBreathTime()
         {
             _canDropsVisible = false;
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitForSeconds(2.0f);
             _isOnAttackMode = true;
         }
     }
