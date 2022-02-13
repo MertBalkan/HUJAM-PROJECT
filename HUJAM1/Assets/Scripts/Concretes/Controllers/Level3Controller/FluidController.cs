@@ -16,7 +16,7 @@ namespace HUJAM1.Concretes.Controllers
             {
                 if (_character != null)
                 {
-                    _character.Move.speedDampTime = 8f;
+                    _character.CanRun = false;
                 }
             }
         }
@@ -26,7 +26,7 @@ namespace HUJAM1.Concretes.Controllers
             {
                 if (_character != null)
                 {
-                    _character.Move.speedDampTime = 8f;
+                    _character.CanRun = false;
                 }
             }
         }
@@ -36,7 +36,7 @@ namespace HUJAM1.Concretes.Controllers
             {
                 if (_character != null)
                 {
-                    _character.Move.speedDampTime = 0.1f;
+                    _character.CanRun = true;
                 }
             }
         }

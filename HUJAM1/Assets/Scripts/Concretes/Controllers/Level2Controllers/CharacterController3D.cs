@@ -40,7 +40,6 @@ namespace HUJAM1.Concretes.Controllers
             if (_input.HorizontalMove != 0 || _input.VerticalMove != 0)
             {
                 _audio.PlayCharacterMoveSound();
-                Debug.Log("AAAAAAAAAAAAAAAAAAAAA");
             }
 
             if (_input.VerticalMove != 0)

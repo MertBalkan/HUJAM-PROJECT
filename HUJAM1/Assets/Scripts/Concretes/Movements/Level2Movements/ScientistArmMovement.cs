@@ -55,7 +55,7 @@ namespace HUJAM1.Concretes.Movements
         {
             _nextRotation = Quaternion.Euler(-180, 90, 0);
             _isOnAttackMode = true;
-            
+
             _currentRotation = Quaternion.Lerp(_currentRotation, _nextRotation, Time.deltaTime);
             _armature.transform.rotation = _currentRotation;
 
