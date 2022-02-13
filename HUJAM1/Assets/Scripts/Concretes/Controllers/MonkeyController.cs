@@ -1,45 +1,60 @@
 using HUJAM1.Abstracts.Controllers;
 using HUJAM1.Abstracts.Inputs;
+using HUJAM1.Abstracts.Interacts;
 using HUJAM1.Abstracts.Movements;
+using HUJAM1.Concretes.Combats;
 using HUJAM1.Concretes.Inputs;
+using HUJAM1.Concretes.Interacts;
 using HUJAM1.Concretes.Movements;
 using UnityEngine;
 
 namespace HUJAM1.Concretes.Controllers
 {
-    public class MonkeyController : MonoBehaviour, IEntityController
-    {
-        [SerializeField] private float _lookSpeed;
-        [SerializeField] private GameObject _player;
-        [SerializeField] private Vector3 _cameraPosition;
-        [SerializeField] private Vector3 _cameraRotation;
-        private Vector3 _offset;
-        [SerializeField] private float _moveSpeed;
-        private IMove3D _move;
-        private IInput2D _input;
 
-        public float MoveSpeed => _moveSpeed;
+    public class MonkeyController : MonoBehaviour
+    {
+        [SerializeField] private GameObject _tube;
+        [SerializeField] private GameObject _tubeSpawnPoint;
+        private IInput2D _input;
+        private ThrowObject _canThrowable;
+        private GameObject _tubeObj;
+
+        public ThrowObject CanThrowable { get => _canThrowable; set => _canThrowable = value; }
+        public IInput2D Input { get => _input; set => _input = value; }
+        public GameObject TubeObj { get => _tubeObj; set => _tubeObj = value; }
 
         private void Awake()
         {
-            _move = new CharacterMove3D(this);
-            _input = new PCInput2D();
+            Input = new PCInput2D();
+            CanThrowable = new ThrowObject();
         }
         private void Start()
         {
-            _offset = new Vector3
-            (
-                _player.transform.position.x + _cameraPosition.x,
-                _player.transform.position.y + _cameraPosition.y,
-                _player.transform.position.z + _cameraPosition.z
-            );
-            transform.rotation = Quaternion.Euler(_cameraRotation.x, _cameraRotation.y, _cameraRotation.z);
+            CanThrowable.CanTubeThrowable = false;
         }
-        private void Update()
+        private void OnTriggerStay(Collider other)
         {
-            _move.Move(_input.HorizontalMove, _input.VerticalMove);
-            _offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * _lookSpeed, Vector3.up) * Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * -_lookSpeed, Vector3.right) * _offset;
-            transform.position = _player.transform.position + _offset;
+            if (other.gameObject.CompareTag("Tube") && Input.InteractButton)
+            {
+                CanThrowable.CanTubeThrowable = true;
+
+                _tubeObj = Instantiate(_tube, _tubeSpawnPoint.transform.position, Quaternion.identity) as GameObject;
+                _tubeObj.transform.rotation = Quaternion.Euler(-90, 0, 0);
+
+                if (_tubeObj != null)
+                {
+                    _tubeObj.GetComponent<Rigidbody>().isKinematic = true;
+                    _tubeObj.transform.parent = transform;
+                    Destroy(other.gameObject.transform.parent.gameObject);
+                }
+            }
+        }
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.gameObject.CompareTag("Tube"))
+            {
+                CanThrowable.CanTubeThrowable = false;
+            }
         }
     }
 }

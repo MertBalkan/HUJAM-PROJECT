@@ -7,8 +7,9 @@ namespace HUJAM1.Concretes.Inputs
     {
         public float HorizontalMove => Input.GetAxis("Horizontal");
         public float VerticalMove => Input.GetAxis("Vertical");
-
         public float MouseAxisX => Input.GetAxis("Mouse X");
         public float MouseAxisY => Input.GetAxis("Mouse Y");
+        public bool InteractButton => Input.GetKey(KeyCode.E);
+        public bool ThrowTube => Input.GetMouseButtonDown(0);
     }
 }
