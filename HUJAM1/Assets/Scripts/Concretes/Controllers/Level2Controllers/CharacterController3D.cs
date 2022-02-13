@@ -14,6 +14,7 @@ namespace HUJAM1.Concretes.Controllers
     public class CharacterController3D : MonoBehaviour, IEntityController
     {
         [SerializeField] private float _moveSpeed;
+        [SerializeField] private float _rotateSpeed;
         public float MoveSpeed => _moveSpeed;
 
         private IInput2D _input;
@@ -30,6 +31,15 @@ namespace HUJAM1.Concretes.Controllers
         {
             _move.Move(_input.HorizontalMove, _input.VerticalMove);
             _animation.WalkAnimation(_input.HorizontalMove, _input.VerticalMove);
+            Turn();
+
+        }
+        private void Turn()
+        {
+            Vector3 rotateVector = _input.VerticalMove > 0 ?
+                Vector3.up * Time.deltaTime * -_rotateSpeed :
+                Vector3.up * Time.deltaTime * _rotateSpeed;
+            transform.Rotate(rotateVector);
         }
     }
 }

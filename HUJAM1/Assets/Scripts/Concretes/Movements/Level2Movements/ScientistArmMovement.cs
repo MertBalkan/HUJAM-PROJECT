@@ -44,7 +44,7 @@ namespace HUJAM1.Concretes.Movements
             Vector3 movePosition = Vector3.Lerp(transform.position, _player.transform.position + totalOffset, Time.deltaTime * _armMoveSpeed);
             this.transform.position = movePosition;
 
-            
+
             if (_isOnAttackMode)
                 AttackPlayer();
             else
