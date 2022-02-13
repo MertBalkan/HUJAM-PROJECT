@@ -85,8 +85,8 @@ public class GameManager : MonoBehaviour
     }
     private IEnumerator PlayButtonEnumerator(int sceneIndex)
     {
-        yield return new WaitForSeconds(1020f * Time.deltaTime); //delay time
-        SceneManager.LoadSceneAsync(sceneIndex);
+        yield return new WaitForSeconds(5.4f); //delay time
+        SceneManager.LoadScene(sceneIndex);
     }
     public void QuitGame()
     {
