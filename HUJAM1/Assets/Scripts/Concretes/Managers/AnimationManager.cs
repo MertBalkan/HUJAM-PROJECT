@@ -18,6 +18,10 @@ namespace HUJAM1.Concretes.Managers
         {
             _camera.GetComponent<Animator>().SetBool("isGoBack", goBack);
         }
+        public void MicroscopeAnimation()
+        {
+            _camera.GetComponent<Animator>().SetTrigger("start");
+        }
         private void SingletonObject()
         {
             if (Instance == null)

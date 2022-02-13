@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayButtonPressed(int sceneIndex)
     {
+        AnimationManager.Instance.MicroscopeAnimation();
         StartCoroutine(PlayButtonEnumerator(sceneIndex));
     }
     public void CreditsButtonPressed()
@@ -84,7 +85,7 @@ public class GameManager : MonoBehaviour
     }
     private IEnumerator PlayButtonEnumerator(int sceneIndex)
     {
-        yield return new WaitForSeconds(4.0f); //delay time
+        yield return new WaitForSeconds(1020f * Time.deltaTime); //delay time
         SceneManager.LoadSceneAsync(sceneIndex);
     }
     public void QuitGame()
