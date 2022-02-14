@@ -9,7 +9,7 @@ namespace HUJAM1.Concretes.UIs
     {
         private TextMeshProUGUI _countdownText;
         private Level3Audio _audio;
-        public float countDownLimit = 10.0f;
+        public float countDownLimit = 60.0f;
 
         private void Awake()
         {
