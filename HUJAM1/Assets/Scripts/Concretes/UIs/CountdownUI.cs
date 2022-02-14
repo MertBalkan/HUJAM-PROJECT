@@ -10,7 +10,6 @@ namespace HUJAM1.Concretes.UIs
         private TextMeshProUGUI _countdownText;
         private Level3Audio _audio;
         private float _countDownLimit = 60.0f;
-        private bool _doorSoundPlayed = false;
 
         private void Awake()
         {
@@ -25,12 +24,8 @@ namespace HUJAM1.Concretes.UIs
 
             if (_countDownLimit <= 0)
             {
-                _doorSoundPlayed = false;
                 _countDownLimit = 0;
             }
-            
-            _audio.PlayDoorOpenSound();
-            _doorSoundPlayed = true;
         }
 
     }

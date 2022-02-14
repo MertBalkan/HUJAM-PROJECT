@@ -8,10 +8,8 @@ namespace HUJAM1.Concretes.Animations
     {
         private AttackerAI _attacker;
         private PaniclyWalkingScientistAI _panic;
-        private Level3Audio _audio;
         private void Awake()
         {
-            _audio = FindObjectOfType<Level3Audio>();
             _attacker = FindObjectOfType<AttackerAI>();
             _panic = GetComponent<PaniclyWalkingScientistAI>();
             if (_attacker == null) return;
@@ -20,7 +18,6 @@ namespace HUJAM1.Concretes.Animations
         public void PlayAttackAnimation(bool onAttack)
         {
             if (_attacker == null) return;
-            _audio.PlayScientistHitSound();
             _attacker.GetComponent<Animator>().SetBool("onAttack", onAttack);
         }
 
