@@ -1,5 +1,5 @@
+<p align = "center"><img src="https://github.com/MertBalkan/HUJAM-PROJECT/blob/main/HUJAM1/Images/healtgif5.gif" width="200" title="character"></p>
 <div align = "center"><h1>PROJECT: KREB</h1></div>
-<img src="https://github.com/MertBalkan/HUJAM-PROJECT/blob/main/HUJAM1/Images/healtgif5.gif" width="200" title="character">
 
 <p>So far we've created a game for HUJAM(hacettepe university game jam)</p>
 
