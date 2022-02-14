@@ -275,16 +275,28 @@ PrefabInstance:
       value: -148.227
       objectReference: {fileID: 0}
     - target: {fileID: 4102327885193918246, guid: c07971a70700f55469ff42d990618c12, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 171.64413
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102327885193918246, guid: c07971a70700f55469ff42d990618c12, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 171.64413
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102327885193918246, guid: c07971a70700f55469ff42d990618c12, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 171.64413
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102327885193918246, guid: c07971a70700f55469ff42d990618c12, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.1446295
+      value: -2.15
       objectReference: {fileID: 0}
     - target: {fileID: 4102327885193918246, guid: c07971a70700f55469ff42d990618c12, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6960733
+      value: 1.44
       objectReference: {fileID: 0}
     - target: {fileID: 4102327885193918246, guid: c07971a70700f55469ff42d990618c12, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.45616192
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 4102327885193918246, guid: c07971a70700f55469ff42d990618c12, type: 3}
       propertyPath: m_LocalRotation.w
@@ -527,9 +539,9 @@ MonoBehaviour:
   m_Waypoints:
   - position: {x: 0, y: 0, z: 0}
     roll: 0
-  - position: {x: 1.1283836, y: 0, z: 3}
+  - position: {x: -0.12834263, y: 0, z: 2.0587692}
     roll: 0
-  - position: {x: 0.54501915, y: 0, z: 6}
+  - position: {x: -1.2714725, y: 0, z: 2.3861427}
     roll: 0
 --- !u!4 &1527504600
 Transform:
@@ -558,6 +570,7 @@ GameObject:
   - component: {fileID: 1620714176}
   - component: {fileID: 1620714180}
   - component: {fileID: 1620714179}
+  - component: {fileID: 1620714181}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -598,7 +611,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 36.63
+  field of view: 34.56
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -623,13 +636,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620714175}
-  m_LocalRotation: {x: 0.07461803, y: -0.3430978, z: 0.027353799, w: 0.93593156}
+  m_LocalRotation: {x: 0.07461802, y: -0.3430978, z: 0.027353797, w: 0.93593156}
   m_LocalPosition: {x: -6.97, y: 1.49, z: 17.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 9.117, y: -40.264, z: 0.529}
 --- !u!114 &1620714179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,6 +709,25 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!95 &1620714181
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620714175}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 017577813ff0dbc4e9aad179bba07e29, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1809207038
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1809207040}
   - component: {fileID: 1809207039}
+  - component: {fileID: 1809207041}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -734,7 +767,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 1300576323022231860}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 36.63
+    FieldOfView: 34.56
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -755,7 +788,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809207038}
-  m_LocalRotation: {x: 0.07461803, y: -0.3430978, z: 0.027353799, w: 0.93593156}
+  m_LocalRotation: {x: 0.07461802, y: -0.3430978, z: 0.027353797, w: 0.93593156}
   m_LocalPosition: {x: -6.97, y: 1.49, z: 13.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -763,6 +796,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1809207041
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809207038}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9873b5d7242789a45b9c512ca2b5c9a7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &6592247896838582
 Transform:
   m_ObjectHideFlags: 0
@@ -1318,6 +1370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1300576323022231860}
+  - component: {fileID: 1821499250684871567}
   m_Layer: 0
   m_Name: Scientist
   m_TagString: Untagged
@@ -1325,6 +1378,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &1821499250684871567
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821499250684871566}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aeb2f9daafda36e45b3ef1eccdbe083b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1836294182404618308
 GameObject:
   m_ObjectHideFlags: 0
