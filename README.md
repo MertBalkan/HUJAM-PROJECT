@@ -1,4 +1,4 @@
-<h1>PROJECT: KREB</h1>
+<div align = "center"><h1>PROJECT: KREB</h1></div>
 <p>So far we've created a game for HUJAM(hacettepe university game jam)</p>
 
 ![teamkulube](https://user-images.githubusercontent.com/43827959/153935665-fa45ddd8-dbbd-4635-91ac-64888f23b176.png)
