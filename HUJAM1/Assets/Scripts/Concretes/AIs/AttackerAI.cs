@@ -30,6 +30,11 @@ namespace HUJAM1.Concretes.AIs
                 this.gameObject.GetComponent<Level3Animation>().PlayAttackAnimation(true);
                 this.transform.LookAt(_player.transform);
             }
+
+            if (this.GetComponent<Rigidbody>().velocity == Vector3.zero)
+            {
+                this.gameObject.GetComponent<Level3Animation>().PlayAttackAnimation(false);
+            }
         }
     }
 }
