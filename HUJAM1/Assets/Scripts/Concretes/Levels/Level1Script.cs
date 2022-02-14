@@ -33,7 +33,7 @@ namespace HUJAM1.Concretes.Levels
         }
         private void PassLevel()
         {
-            if (GameManager.Instance.BlobScore >= 18)
+            if (GameManager.Instance.BlobScore >= 10)
             {
                 GameManager.Instance.LoadSceneByBuildIndex();
             }

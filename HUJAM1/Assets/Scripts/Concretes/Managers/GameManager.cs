@@ -48,9 +48,9 @@ public class GameManager : MonoBehaviour
         if (player == null) return;
 
         player.transform.localScale = new Vector3(
-            player.transform.localScale.x + 0.1f,
-            player.transform.localScale.y + 0.1f,
-            player.transform.localScale.z + 0.1f
+            player.transform.localScale.x + 0.2f,
+            player.transform.localScale.y + 0.2f,
+            player.transform.localScale.z + 0.2f
         );
     }
 
