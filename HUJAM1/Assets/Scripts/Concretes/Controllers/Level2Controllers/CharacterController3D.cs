@@ -37,7 +37,7 @@ namespace HUJAM1.Concretes.Controllers
             _move.Move(_input.HorizontalMove, _input.VerticalMove);
             _animation.WalkAnimation(_input.HorizontalMove, _input.VerticalMove);
 
-            if (_input.HorizontalMove != 0 || _input.VerticalMove != 0)
+            if (_input.HorizontalMove == 0 || _input.VerticalMove == 0)
             {
                 _audio.PlayCharacterMoveSound();
             }
