@@ -1,5 +1,5 @@
-<div align = "center"><h1>PROJECT: KREB</h1>
-![healtgif5](https://user-images.githubusercontent.com/43827959/153934730-688a3df5-4d20-4479-8aa7-520cee6ed89a.gif)</div>
+<div align = "center"><h1>PROJECT: KREB</h1></div>
+![healtgif5](https://user-images.githubusercontent.com/43827959/153934730-688a3df5-4d20-4479-8aa7-520cee6ed89a.gif)
 <p>So far we've created a game for HUJAM(hacettepe university game jam)</p>
 
 ![teamkulube](https://user-images.githubusercontent.com/43827959/153935665-fa45ddd8-dbbd-4635-91ac-64888f23b176.png)
