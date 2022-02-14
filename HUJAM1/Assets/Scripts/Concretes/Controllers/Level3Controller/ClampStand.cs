@@ -15,7 +15,6 @@ namespace HUJAM1.Concretes.Combats
             {
                 _player.GetComponent<CharacterControllerLvL3>().Health.TakeDamage(20);
                 _player.GetComponent<CharacterControllerLvL3>().CurrentHealth = _player.GetComponent<CharacterControllerLvL3>().Health.CurrentHealth; 
-                Debug.Log(_player.GetComponent<CharacterControllerLvL3>().Health.CurrentHealth);
             }
         }
     }

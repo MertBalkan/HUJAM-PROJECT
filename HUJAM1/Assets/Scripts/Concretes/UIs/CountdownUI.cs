@@ -9,7 +9,7 @@ namespace HUJAM1.Concretes.UIs
     {
         private TextMeshProUGUI _countdownText;
         private Level3Audio _audio;
-        private float _countDownLimit = 60.0f;
+        public float countDownLimit = 10.0f;
 
         private void Awake()
         {
@@ -19,12 +19,13 @@ namespace HUJAM1.Concretes.UIs
 
         private void Update()
         {
-            _countDownLimit -= Time.deltaTime;
-            _countdownText.text = "Countdown: " + (int)_countDownLimit;
+            countDownLimit -= Time.deltaTime;
+          
+            _countdownText.text = "Countdown: " + (int)countDownLimit;
 
-            if (_countDownLimit <= 0)
+            if (countDownLimit <= 0)
             {
-                _countDownLimit = 0;
+                countDownLimit = 0;
             }
         }
 

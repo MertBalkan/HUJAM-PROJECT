@@ -22,7 +22,6 @@ namespace HUJAM1.Concretes.UIs
         private void Update()
         {
             _slider.value = Mathf.Clamp(_slider.value, 0, _character.Health.CurrentHealth);
-            Debug.Log(_slider.value);
         }
 
     }

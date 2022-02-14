@@ -38,10 +38,10 @@ public class MoveBehaviour : GenericBehaviour
 	void Update()
 	{
 		// Get jump input.
-		if (!jump && Input.GetButtonDown(jumpButton) && behaviourManager.IsCurrentBehaviour(this.behaviourCode) && !behaviourManager.IsOverriding())
-		{
-			jump = true;
-		}
+		// if (!jump && Input.GetButtonDown(jumpButton) && behaviourManager.IsCurrentBehaviour(this.behaviourCode) && !behaviourManager.IsOverriding())
+		// {
+		// 	jump = true;
+		// }
 	}
 
 	// LocalFixedUpdate overrides the virtual function of the base class.
