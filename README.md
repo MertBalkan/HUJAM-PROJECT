@@ -8,7 +8,7 @@
 <p>This github repository created with Mert Nizamoglu and Mert Balkan.</p>
 <a href = "https://verte-x.itch.io/project-creb">Project itch.io link</a>
 
-<div allign = "center">Screen shots
+<div align = "center">Screen shots
 
 ![ss1](https://user-images.githubusercontent.com/43827959/153936113-c008ccb4-953e-4dbc-93ab-ab709caa41c2.png)
 ![ss2](https://user-images.githubusercontent.com/43827959/153936127-84e82747-65ca-411c-852e-8a292413816b.png)
