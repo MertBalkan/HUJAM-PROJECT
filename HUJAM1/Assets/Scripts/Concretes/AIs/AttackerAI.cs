@@ -12,11 +12,9 @@ namespace HUJAM1.Concretes.AIs
     public class AttackerAI : MonoBehaviour
     {
         [SerializeField] private GameObject _player;
-        private Level3Audio _audio;
         private NavMeshAgent _navMeshAgent;
         private void Awake()
         {
-            _audio = FindObjectOfType<Level3Audio>();
             _navMeshAgent = GetComponent<NavMeshAgent>();
         }
         private void Update()
@@ -30,7 +28,6 @@ namespace HUJAM1.Concretes.AIs
             if (Vector3.Distance(_player.transform.position, transform.position) <= _navMeshAgent.stoppingDistance)
             {
                 this.gameObject.GetComponent<Level3Animation>().PlayAttackAnimation(true);
-                _audio.PlayScientistHitSound();
                 this.transform.LookAt(_player.transform);
             }
         }
