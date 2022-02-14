@@ -6,20 +6,23 @@ namespace HUJAM1.Concretes.Audios
 {
     public class Level3Audio : MonoBehaviour
     {
-        private AudioSource[] _audios;
-
-        private void Awake()
+        [SerializeField] private AudioClip _doorClip;
+        [SerializeField] private AudioSource _doorOpenSoundAS;
+        [SerializeField] private AudioSource _scientistHitSoundAS;
+        private void Start()
         {
-            _audios = GetComponentsInChildren<AudioSource>();
+            _doorOpenSoundAS.playOnAwake = false;
         }
 
         public void PlayScientistHitSound()
         {
-            _audios[0].Play();
+            if (!_scientistHitSoundAS.isPlaying) return;
+            _scientistHitSoundAS.Play();
         }
         public void PlayDoorOpenSound()
         {
-            _audios[1].Play();
+            if (_doorOpenSoundAS.isPlaying) return;
+            _doorOpenSoundAS.Play();
         }
 
     }
