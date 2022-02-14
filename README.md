@@ -1,5 +1,5 @@
 <div align = "center"><h1>PROJECT: KREB</h1></div>
-![healtgif5](https://user-images.githubusercontent.com/43827959/153934730-688a3df5-4d20-4479-8aa7-520cee6ed89a.gif)
+
 <p>So far we've created a game for HUJAM(hacettepe university game jam)</p>
 
 ![teamkulube](https://user-images.githubusercontent.com/43827959/153935665-fa45ddd8-dbbd-4635-91ac-64888f23b176.png)
@@ -10,7 +10,7 @@
 <a href = "https://verte-x.itch.io/project-creb">Project itch.io link</a>
 
 <div align = "center">Screen shots
-  
+  ![healtgif5](https://user-images.githubusercontent.com/43827959/153934730-688a3df5-4d20-4479-8aa7-520cee6ed89a.gif)
 ![ss1](https://user-images.githubusercontent.com/43827959/153936113-c008ccb4-953e-4dbc-93ab-ab709caa41c2.png)
 ![ss2](https://user-images.githubusercontent.com/43827959/153936127-84e82747-65ca-411c-852e-8a292413816b.png)
 ![ss3](https://user-images.githubusercontent.com/43827959/153936132-9d36dcfd-0d22-4b11-ad3c-f57c59a41a5f.png)
