@@ -6,9 +6,6 @@ namespace HUJAM1.Concretes.Audios
 {
     public class Level3Audio : MonoBehaviour
     {
-
-        // [SerializeField] private AudioClip _scientistGrumbleSound;
-
         private AudioSource[] _audios;
 
         private void Awake()
